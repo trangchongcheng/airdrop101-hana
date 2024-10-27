@@ -16,6 +16,10 @@ Dùng invite code ủng hộ: **VQY1TS**
 
 ## Cách chạy code
 
+Trước khi tải code về chạy thì mọi người phải cài nodejs và vscode trước nhé, xem video hd cài ở đây:
+
+https://youtu.be/YMwiiN557yg
+
 1. Sửa file config.ts, chỉ cần điền refresh_token vào, nếu có proxy thì điền proxy vào theo cú pháp minh họa ở dưới.Cách lấy refresh token xem video trên telegram airdrop101xyz
 
 ```
