@@ -12,7 +12,7 @@ Raised: 4M
 
 https://hanafuda.hana.network/
 
-Dùng invite code ủng hộ: VQY1TS
+Dùng invite code ủng hộ: **VQY1TS**
 
 ## Cách chạy code
 
