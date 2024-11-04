@@ -72,8 +72,18 @@ npm install -g typescript ts-node
 
 3. Run code
 
+Chạy grows
+
 ```
-ts-node index.ts
+ts-node grow.ts
+
+```
+
+Mở thêm 1 tab chạy deposit nếu muốn deposit
+
+```
+ts-node deposit.ts
+
 ```
 
 Xong!!!
