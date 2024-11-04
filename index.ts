@@ -104,7 +104,7 @@ const getNewAccesstoken = async (refresh_token: string) => {
 };
 const getRandomDelay = () => {
   const minDelay = 1000; // 1 giây
-  const maxDelay = 5000; // 5 giây
+  const maxDelay = 1500; // 1.5 giây
   return Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
 };
 grows();
