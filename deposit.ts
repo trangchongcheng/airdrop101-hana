@@ -10,7 +10,9 @@ import {
   SyncEthereumTx,
 } from "./config";
 const { Web3 } = require("web3");
-const { sleep } = require("../utils/sleep");
+const sleep = (millis: number) => {
+  return new Promise((resolve) => setTimeout(resolve, millis));
+};
 
 const web3 = new Web3(BASE_RPC);
 
