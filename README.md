@@ -75,7 +75,7 @@ npm install -g typescript ts-node
 Chạy grows
 
 ```
-ts-node grow.ts
+ts-node grows.ts
 
 ```
 
