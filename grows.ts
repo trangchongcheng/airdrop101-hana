@@ -6,7 +6,7 @@ import {
   CurrentUser,
   GetGardenForCurrentUser,
   HANA_URL,
-  issueGrowAction,
+  ExecuteGrowAction,
   REFRESH_TOKEN_URL,
   SLEEPTIME,
 } from "./config";
@@ -42,20 +42,10 @@ async function grows() {
         console.log(`Đang quay số ${account.name}....\n`);
         const { data: data1 } = await axiosInstance.post(
           HANA_URL,
-          issueGrowAction
+          ExecuteGrowAction
         );
         console.log(`Quay thành công ${data1.data.issueGrowAction} điểm\n`);
 
-        await sleep(getRandomDelay());
-
-        console.log("Đang confirm điểm\n");
-
-        const { data: data2 } = await axiosInstance.post(
-          HANA_URL,
-          commitGrowAction
-        );
-        await sleep(getRandomDelay());
-        console.log(`Confirm thành công: ${data2.data.commitGrowAction}\n`);
         console.log(`Bạn còn tổng ${growActionCount} lượt quay\n`);
 
         const { data: data3 } = await axiosInstance.post(HANA_URL, CurrentUser);
@@ -104,7 +94,7 @@ const getNewAccesstoken = async (refresh_token: string) => {
 };
 const getRandomDelay = () => {
   const minDelay = 1000; // 1 giây
-  const maxDelay = 1500; // 1.5 giây
+  const maxDelay = 3000; // 1.5 giây
   return Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
 };
 grows();

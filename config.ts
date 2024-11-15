@@ -12,6 +12,13 @@ export const issueGrowAction = {
   query: "mutation issueGrowAction {\n  issueGrowAction\n}",
   operationName: "issueGrowAction",
 };
+
+export const ExecuteGrowAction = {
+  query:
+    "mutation ExecuteGrowAction($withAll: Boolean) {\n  executeGrowAction(withAll: $withAll) {\n    baseValue\n    leveragedValue\n    totalValue\n    multiplyRate\n  }\n}",
+  operationName: "ExecuteGrowAction",
+};
+
 export const commitGrowAction = {
   query: "mutation commitGrowAction {\n  commitGrowAction\n}",
   operationName: "commitGrowAction",
