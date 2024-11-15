@@ -16,6 +16,9 @@ export const issueGrowAction = {
 export const ExecuteGrowAction = {
   query:
     "mutation ExecuteGrowAction($withAll: Boolean) {\n  executeGrowAction(withAll: $withAll) {\n    baseValue\n    leveragedValue\n    totalValue\n    multiplyRate\n  }\n}",
+  variables: {
+    withAll: true,
+  },
   operationName: "ExecuteGrowAction",
 };
 

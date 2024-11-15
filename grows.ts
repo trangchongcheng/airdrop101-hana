@@ -44,7 +44,9 @@ async function grows() {
           HANA_URL,
           ExecuteGrowAction
         );
-        console.log(`Quay thành công ${data1.data.issueGrowAction} điểm\n`);
+        console.log(
+          `Quay thành công ${data1.data.executeGrowAction.totalValue} điểm\n`
+        );
 
         console.log(`Bạn còn tổng ${growActionCount} lượt quay\n`);
 
@@ -94,7 +96,7 @@ const getNewAccesstoken = async (refresh_token: string) => {
 };
 const getRandomDelay = () => {
   const minDelay = 1000; // 1 giây
-  const maxDelay = 3000; // 1.5 giây
+  const maxDelay = 5000; // 5 giây
   return Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
 };
 grows();
